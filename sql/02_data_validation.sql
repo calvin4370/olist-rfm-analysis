@@ -25,7 +25,7 @@ FROM orders;
 -- order_items: Primary key: (order_id, order_item_id)
 SELECT
     COUNT(*) AS total_order_items,
-    COUNT(DISTINCT CONCAT(order_id, "|", order_item_id)) as unique_order_items
+    COUNT(DISTINCT CONCAT(order_id, '|', order_item_id)) as unique_order_items
 FROM order_items;
 
 -- customers: Primary key: customer_unique_id
@@ -97,7 +97,7 @@ SELECT
     COUNT(DISTINCT order_id) as num_orders -- DISTINCT order_id because one customer may have repeats of the same order_id if the order contains more than 1 item, not that it matters here
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
-WHERE order_status = "delivered"
+WHERE order_status = 'delivered'
 GROUP BY customer_unique_id
 ORDER BY num_orders DESC;
 
@@ -108,6 +108,6 @@ SELECT
 FROM customers c
 JOIN orders o ON c.customer_id = o.customer_id
 JOIN order_items oi ON o.order_id = oi.order_id
-WHERE order_status = "delivered"
+WHERE order_status = 'delivered'
 GROUP BY customer_unique_id
 ORDER BY revenue DESC;
