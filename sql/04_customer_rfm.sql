@@ -27,12 +27,12 @@ CROSS JOIN reference_date;
 SELECT
     COUNT(*) AS num_rows,
     COUNT(DISTINCT customer_unique_id) AS unique_customer_unique_ids,
-    SUM(CASE WHEN recency IS NULL THEN 1 ELSE 0) as null_recencies,
-    SUM(CASE WHEN frequency IS NULL THEN 1 ELSE 0) as null_frequencies,
-    SUM(CASE WHEN monetary IS NULL THEN 1 ELSE 0) as null_monetaries,
-    SUM(CASE WHEN recency < 0 THEN 1 ELSE 0) as negative_recencies,
-    SUM(CASE WHEN frequency < 1 THEN 1 ELSE 0) as frequencies_less_than_1,
-    SUM(CASE WHEN monetary <= 0 THEN 1 ELSE 0) as non_positive_monetaries
+    SUM(CASE WHEN recency IS NULL THEN 1 ELSE 0 END) as null_recencies,
+    SUM(CASE WHEN frequency IS NULL THEN 1 ELSE 0 END) as null_frequencies,
+    SUM(CASE WHEN monetary IS NULL THEN 1 ELSE 0 END) as null_monetaries,
+    SUM(CASE WHEN recency < 0 THEN 1 ELSE 0 END) as negative_recencies,
+    SUM(CASE WHEN frequency < 1 THEN 1 ELSE 0 END) as frequencies_less_than_1,
+    SUM(CASE WHEN monetary <= 0 THEN 1 ELSE 0 END) as non_positive_monetaries
 FROM customer_rfm;
 
 

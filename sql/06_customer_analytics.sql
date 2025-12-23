@@ -28,7 +28,8 @@ GROUP BY
     rfm.rfm_segment, 
     rfm.recency, 
     rfm.frequency, 
-    rfm.monetary;
+    rfm.monetary,
+    md.dataset_end_date;
 
 
 -- Validate Final table

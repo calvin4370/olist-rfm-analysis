@@ -10,9 +10,10 @@ SELECT
     NTILE(5) OVER (ORDER BY recency DESC) AS r_score,
     -- f-score: Hardcode as NTILE will give a bad distribution
     CASE 
-        WHEN frequency >= 4 THEN 5
-        WHEN frequency = 3 THEN 4
-        WHEN frequency = 2 THEN 3
+        WHEN frequency >= 5 THEN 5
+        WHEN frequency = 4 THEN 4
+        WHEN frequency = 3 THEN 3
+        WHEN frequency = 2 THEN 2
         WHEN frequency = 1 THEN 1
         ELSE 1
     END AS f_score,

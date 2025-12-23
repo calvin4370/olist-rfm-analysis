@@ -35,7 +35,7 @@ WHERE o.order_status = 'delivered';
 SELECT
     COUNT(*) AS num_rows,
     COUNT(DISTINCT order_id) AS unique_order_ids
-FROM fact_orders
+FROM fact_orders;
 
 -- No NULLs in primary key or dimension keys
 SELECT
