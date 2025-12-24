@@ -1,4 +1,4 @@
-# Olist Customer RFM Analysis
+# Olist Customer Segmentation and Retention Analytics
 
 ## Project Overview
 This project analyses customer purchasing behavior in a multi-seller e-commerce marketplace to understand customer value, engagement, and retention patterns. 
@@ -25,6 +25,7 @@ Key steps in the analysis include:
 - A vast majority of customers fall into low-frequency segments such as "Hibernating", "About to Sleep", and "Promising", which indicates a highly transactional customer base driven primarily by one-time purchases.
 - Higher value segments ("Loyal Customers" and "Champions"), represent a very small proportion of the customer base but exhibit significantly higher purchase frequency and recency.
 - Low-frequency segments produce the vast majority of revenue, suggesting that improving customer retention could be key to increasing revenue.
+- Pareto analysis shows that revenue is not highly concentrated, with approximately **45% of customers generating 80% of total revenue**, which supports the fact that the Olist marketplace is made up primarily of one-time buyers compared to loyal repeat customers.
 
 ## Dashboard
 This Tableau dashboard visualises the distribution of customers across RFM segments and compares recency, frequency, and monetary behaviour between high-value and low-value customer groups.
